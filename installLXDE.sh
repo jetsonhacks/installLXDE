@@ -3,7 +3,8 @@
 # Install the LightDM desktop manager
 # Use Compton desktop compositor 
 sudo apt-get update
-sudo apt-get install lightdm lxde compton -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install lightdm -y
+sudo apt-get install lxde compton -y
 
 # Write the following text to the file /etc/xdg/autostart/lxde-compton.desktop
 # This tells LXDE to use the Compton compositor
@@ -25,9 +26,6 @@ sudo debconf-set-selections <<< "lightdm shared/default-x-display-manager select
 # You can manually change desktop managers using:
 # sudo dpkg-reconfigure lightdm
 #
-# or the equivalent:
-# 
-# sudo dkpg-reconfigure gdm3
 
 # Also, put a LXTerminal shortcut on the desktop
 cp lxterminal.desktop ~/Desktop/lxterminal.desktop
@@ -35,6 +33,6 @@ cp lxterminal.desktop ~/Desktop/lxterminal.desktop
 echo
 echo
 echo 'In order to use LXDE, you will need to logout.'
-echo 'Before you login, select "LXDE" from the settings menu in the login screen'
+echo 'Before you login back in, select "LXDE" from the settings menu in the login screen'
 echo 'After logging in, you will need to reboot for the LightDM changes to take effect.'
 
