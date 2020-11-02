@@ -32,7 +32,5 @@ cp lxterminal.desktop ~/Desktop/lxterminal.desktop
 
 echo
 echo
-echo 'In order to use LXDE, you will need to logout.'
-echo 'Before you login back in, select "LXDE" from the settings menu in the login screen'
-echo 'After logging in, you will need to reboot for the LightDM changes to take effect.'
+echo 'Reboot for changes to take effect.'
 
