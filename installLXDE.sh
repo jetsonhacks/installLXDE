@@ -19,7 +19,7 @@ OnlyShowIn=LXDE
 EOF
 
 # Use the lightdm desktop manager instead of gdm3
-# lxde works with either lightdm or gdm3; If you want to use gdm3, comment this line out
+# lxde works with either lightdm or gdm3; If you want to use only gdm3, comment this line out
 sudo debconf-set-selections <<< "lightdm shared/default-x-display-manager select lightdm"
 
 # You can manually change desktop managers using:
@@ -28,6 +28,9 @@ sudo debconf-set-selections <<< "lightdm shared/default-x-display-manager select
 # or the equivalent:
 # 
 # sudo dkpg-reconfigure gdm3
+
+# Also, put a LXTerminal shortcut on the desktop
+cp lxterminal.desktop ~/Desktop/lxterminal.desktop
 
 echo
 echo
