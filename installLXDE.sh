@@ -3,7 +3,10 @@
 # Install the LightDM desktop manager
 # Use Compton desktop compositor 
 sudo apt-get update
-sudo DEBIAN_FRONTEND=noninteractive apt-get install lightdm -y
+# Use the interactive version
+sudo apt-get install lightdm -y
+# This is the command for the noninteractive version
+# sudo DEBIAN_FRONTEND=noninteractive apt-get install lightdm -y
 sudo apt-get install lxde compton -y
 
 # Write the following text to the file /etc/xdg/autostart/lxde-compton.desktop
@@ -20,8 +23,9 @@ OnlyShowIn=LXDE
 EOF
 
 # Use the lightdm desktop manager instead of gdm3
-# lxde works with either lightdm or gdm3; If you want to use only gdm3, comment this line out
-sudo debconf-set-selections <<< "lightdm shared/default-x-display-manager select lightdm"
+# lxde works with either lightdm or gdm3; If you want to use only gdm3
+# This does not seem to persist correctly
+# sudo debconf-set-selections <<< "lightdm shared/default-x-display-manager select lightdm"
 
 # You can manually change desktop managers using:
 # sudo dpkg-reconfigure lightdm
