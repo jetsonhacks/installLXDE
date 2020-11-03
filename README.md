@@ -18,7 +18,7 @@ In order to switch between lightdm and gdm3, you can use the command:
 
 $ sudo dpkg-reconfigure lightdm
 
-The default background desktop wallpaper is a file named NVIDIA_wallpaper.jpg. It is in the /usr/share/backgrounds/ directory in JetPack 4.4.
+The default background desktop wallpaper is in a file named NVIDIA_wallpaper.jpg. It is in the /usr/share/backgrounds/ directory in JetPack 4.4.
 
 Enjoy
 
