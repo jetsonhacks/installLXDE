@@ -37,5 +37,5 @@ cp lxterminal.desktop ~/Desktop/lxterminal.desktop
 echo
 echo
 echo 'Reboot for changes to take effect.'
-echo 'After reboot, make sure that LXDE is checked when logging in."
+echo 'After reboot, make sure that LXDE is checked when logging in.'
 
